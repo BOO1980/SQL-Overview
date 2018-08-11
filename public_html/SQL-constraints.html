@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>SQL Constraints</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Constraints</h1>
+        <h2>NOT NULL Constraint</h2>
+        <ul><li>By default, a column can hold NULL values.</li>
+            <li>If you do not want a column to have a NULL value, then you need to define such a constraint on this column specifying that NULL is now not allowed for that column.</li>
+            <li>A NULL is not the same as no data, rather, it represents unknown data.</li></ul>
+        <a href="sql-queries-examples/tp-create-constraint-notnull-query.sql">Example of Not Null Constraint query</a>
+        <h3>DEFAULT Constraint</h3> 
+        <ul><li>The DEFAULT constraint provides a default value to a column when the INSERT INTO statement does not provide a specific value.
+            </li></ul>
+        <a href="sql-queries-examples/tp-create-constraint-default-query.sql">Example of Default Constraint query</a>
+        <h3>UNIQUE Constraint</h3>
+        <ul><li>Ensures that all the values in a column are different.</li>
+            <li>The UNIQUE Constraint prevents two records from having identical values in a column</li>
+        </ul>
+        <a href="sql-queries-examples/tp-create-constraint-unique-query.sql">Example of Unique Constraint query</a>
+        <h3>PRIMARY Key</h3>
+        <ul><li> Uniquely identifies each row/record in a database table</li>
+            <li>A primary key column cannot have NULL values.</li>
+            <li>A table can have only one primary key, which may consist of single or multiple fields</li>
+            <li>When multiple fields are used as a primary key, they are called a composite key.</li>
+            <li>If a table has a primary key defined on any field(s), then you cannot have two records having the same value of that field(s).</li>
+        </ul>
+        <a href="sql-queries-examples/tp-create-constraint-primary-key-query.sql">Example of Primary Key Constraint query</a>
+        <h3>FOREIGN Key</h3>
+        <ul><li>
+                Uniquely identifies a row/record in any another database table.
+            </li>
+            <li>A foreign key is a key used to link two tables together. This is sometimes also called as a referencing key.</li>
+            <li>A Foreign Key is a column or a combination of columns whose values match a Primary Key in a different table.</li>
+            <li>The relationship between 2 tables matches the Primary Key in one of the tables with a Foreign Key in the second table.</li>
+            <li>If a table has a primary key defined on any field(s), then you cannot have two records having the same value of that field(s).</li>
+        </ul>
+        <a href="sql-queries-examples/tp-create-constraint-foreign-key-query.sql">Example of Foreign Key Constraint query</a>
+        <h3>CHECK Constraint</h3>
+        <ul><li>The CHECK constraint ensures that all values in a column satisfy certain conditions.</li>
+            <li>The CHECK Constraint enables a condition to check the value being entered into a record. If the condition evaluates to false, the record violates the constraint and is not entered the table.</li></ul>
+        <a href="sql-queries-examples/tp-create-constraint-check-query.sql">Example of Check Constraint query</a>
+        <h3>INDEX Constraint</h3>
+        <ul><li>Used to create and retrieve data from the database very quickly.</li>
+            <li>An Index can be created by using a single or group of columns in a table</li><li> When the index is created, it is assigned a ROWID for each row before it sorts out the data.</li>
+            <li>Proper indexes are good for performance in large databases, but you need to be careful while creating an index.</li>
+            <li> A Selection of fields depends on what you are using in your SQL queries.</li></ul>
+        <a href="sql-queries-examples/tp-create-constraint-index-query.sql">Example of Index Constraint query</a>
+    </body>
+</html>
