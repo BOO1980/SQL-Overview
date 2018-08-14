@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>SQL Data Types</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Data Types</h1>
+        <ul><li>SQL Data Type is an attribute that specifies the type of data of any object.</li>
+            <li>Each column, variable and expression has a related data type in SQL. </li>
+            <li>You can use these data types while creating your tables.</li>
+            <li>You can choose a data type for a table column based on your requirement.</li></ul>
+        <h2>Exact Numeric Data Types</h2>
+        <table>
+            <tr>
+                <th>DATA TYPE</th>
+                <th>FROM</th>
+                <th>TO</th></tr>
+            <tr><td>bigint</td>
+                <td>-9,223,372,036,854,775,808</td>
+                <td>9,223,372,036,854,775,807</td>
+            </tr>
+            <tr><td>int</td>
+                <td>-2,147,483,648</td>
+                <td>2,147,483,647</td>
+            </tr>
+            <tr><td>smallint</td>
+                <td>-32,768</td>
+                <td>32,767</td>
+            </tr>
+            <tr><td>tinyint</td>
+                <td>0</td>
+                <td>255</td>
+            </tr>
+            <tr><td>bit</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr><td>decimal</td>
+                <td>10^38+1</td>
+                <td>10^38-1</td>
+            </tr>
+            <tr><td>numeric</td>
+                <td>10^38+1</td>
+                <td>10^38-1</td>
+            </tr>
+            <tr><td>money</td>
+                <td>-922,337,203,685,477.5808</td>
+                <td>+922,337,203,685,477.5807</td>
+            </tr>
+            <tr><td>smallmoney</td>
+                <td>-214,748.3648</td>
+                <td>+214,748.3647</td>
+            </tr>
+        </table>
+        <h2>Approximate Numeric Data Types</h2>
+        <table>
+            <tr>
+                <th>DATA TYPE</th>
+                <th>FROM</th>
+                <th>TO</th></tr>
+            <tr><td>float</td>
+                <td>-1.79E+308</td>
+                <td>1.79E+308</td>
+            </tr>
+            <tr><td>int</td>
+                <td>-3.40E+38</td>
+                <td>3.4E+38</td>
+            </tr></table>
+        <h2>Date and Time Data Types</h2>
+        <table>
+            <tr>
+                <th>DATA TYPE</th>
+                <th>FROM</th>
+                <th>TO</th></tr>
+            <tr><td>datetime</td>
+                <td>Jan 1, 1753</td>
+                <td>Dec 31, 9999</td>
+            </tr>
+            <tr><td>smalldatetime</td>
+                <td>Jan 1, 1900</td>
+                <td>Jun 6, 2079</td>
+            </tr>
+            <tr><td>date</td>
+                <td>Stores a date like June 30, 1991</td>
+
+            </tr>
+            <tr><td>time</td>
+                <td>Stores a time of day like 12:30 P.M</td>
+            </tr>
+        </table>
+        <h2>Character Strings Data Types</h2>
+        <table>
+            <tr>
+                <th>Sr.No</th>
+                <th>DATA TYPE & Description</th>
+            <tr><td>char</td>
+                <td>1</td>
+                <td>Maximum length of 8,000 characters.( Fixed length non-Unicode characters)</td>
+            </tr>
+            <tr><td>varchar</td>
+                <td>2</td>
+                <td>Maximum of 8,000 characters.(Variable-length non-Unicode data).</td>
+            </tr>
+            <tr><td>varchar(max)</td>
+                <td>Maximum length of 2E + 31 characters, Variable-length non-Unicode data (SQL Server 2005 only).</td>
+
+            </tr>
+            <tr><td>varchar(text)</td>
+                <td>4</td>
+                <td>Variable-length non-Unicode data with a maximum length of 2,147,483,647 characters.</td>
+            </tr>
+        </table>
+        <h2>Unicode Character Strings Data Types</h2>
+        <table>
+            <tr>
+                <th>Sr.No</th>
+                <th>DATA TYPE & Description</th>
+            <tr><td>nchar</td>
+                <td>1</td>
+                <td>Maximum length of 4,000 characters.(Fixed length Unicode)</td>
+            </tr>
+            <tr><td>nvarchar</td>
+                <td>2</td>
+                <td>Maximum of 4,000 characters.(Variable-length Unicode).</td>
+            </tr>
+            <tr><td>nvarchar(max)</td>
+                <td>Maximum length of 2E + 31 characters (SQL Server 2005 only).( Variable length Unicode)</td>
+            </tr>
+            <tr><td>ntext</td>
+                <td>4</td>
+                <td>Maximum length of 1,073,741,823 characters. ( Variable length Unicode)</td>
+            </tr>
+        </table>
+        <h2>Binary Data Types</h2>
+        <table>
+            <tr>
+                <th>Sr.No</th>
+                <th>DATA TYPE & Description</th>
+            <tr><td>binary</td>
+                <td>1</td>
+                <td>Maximum length of 8,000 bytes.(Fixed length binary data)</td>
+            </tr>
+            <tr><td>varbinary</td>
+                <td>2</td>
+                <td>Maximum of 8,000 bytes.(Variable-length binary data).</td>
+            </tr>
+            <tr><td>varbinary(max)</td>
+                <td>Maximum length of 2E + 31 bytes (SQL Server 2005 only).( Variable length Binary data)</td>
+            </tr>
+            <tr><td>image</td>
+                <td>4</td>
+                <td>Maximum length of 2,147,483,647 bytes. ( Variable length Binary Data)</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Sr.No</th>
+                <th>DATA TYPE & Description</th>
+            <tr><td>sql_variant</td>
+                <td>1</td>
+                <td>Stores values of various SQL Server-supported data types, except text, ntext, and timestamp.</td>
+            </tr>
+            <tr><td>timestamp</td>
+                <td>2</td>
+                <td>Stores a database-wide unique number that gets updated every time a row gets updated</td>
+            </tr>
+            <tr><td>uniqueidentifier</td>
+                <td>3</td>
+                <td>Stores a globally unique identifier (GUID)</td>
+            </tr>
+            <tr><td>xml</td>
+                <td>4</td>
+                <td>Stores XML data. You can store xml instances in a column or a variable (SQL Server 2005 only).</td>
+            </tr>
+            <tr><td>cursor</td>
+                <td>5</td>
+                <td>Reference to a cursor object</td>
+            </tr>
+            <tr><td>table</td>
+                <td>6</td>
+                <td>Stores a result set for later processing</td>
+            </tr>
+        </table>
+    </body>
+</html>
