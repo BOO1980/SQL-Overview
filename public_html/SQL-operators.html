@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>SQL Operators</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>SQL Operators</h1>
+        <ul><li>An operator is a reserved word or a character used primarily in an SQL statement's WHERE clause to perform operation(s), such as comparisons and arithmetic operations.</li>
+            <li>These Operators are used to specify conditions in an SQL statement and to serve as conjunctions for multiple conditions in a statement.
+                <ul>
+                    <li>Arithmetic operators</li>
+                    <li>Comparison operators</li>
+                    <li>Logical operators</li>
+                    <li>Operators used to negate conditions</li>
+                </ul>
+            </li>
+        </ul>
+        <h1>SQL Arithmetic Operators</h1>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>+ (Addition)</td>
+                <td>Adds values on either side of the operator.</td>
+                <td>a + b will give 30</td>
+            </tr>
+            <tr>
+                <td>- (Subtraction)</td>
+                <td>Subtracts right hand operand from left hand operand.</td>
+                <td>a - b will give -10</td>
+            </tr>
+            <tr>
+                <td>* (Multiplication)</td>
+                <td>Multiplies values on either side of the operator.</td>
+                <td>a * b will give 200</td>
+            </tr>
+            <tr>
+                <td>/ (Division)</td>
+                <td>Divides left hand operand by right hand operand.</td>
+                <td>b / a will give 2</td>
+            </tr>
+            <tr>
+                <td>% (Modulus)</td>
+                <td>Divides left hand operand by right hand operand and returns remainder.</td>
+                <td>b % a will give 0</td>
+            </tr>
+        </table>
+        <a href="sql-queries-examples/tp-logical-operators.sql">Example of Arithmetic Operators</a>
+        <h1>Comparison Operators</h1>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+                <td>(a = b) is not true.</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                <td>(a != b) is true.</td>
+            </tr>
+            <tr>
+                <td>&lt;&gt;</td>
+                <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                <td>(a &lt;&gt; b) is true.</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td>
+                <td>(a < b) is true.</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+                <td>(a >= b) is not true.</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+                <td>(a <= b) is true.</td>
+            </tr>
+            <tr>
+                <td>! &lt;</td>
+                <td>Checks if the value of left operand is not less than the value of right operand, if yes then condition becomes true.</td>
+                <td>(a !< b) is false.</td>
+            </tr>
+            <tr>
+                <td>! &gt;</td>
+                <td>Checks if the value of left operand is not greater than the value of right operand, if yes then condition becomes true.</td>
+                <td>(a !> b) is false.</td>
+            </tr>
+        </table>
+        <h1>SQL Logical Operators</h1>
+        <table>
+            <tr><th>Operator</th>
+                <th>Description</th></tr>
+            <tr><td>ALL</td>
+                <td>The ALL operator is used to compare a value to all values in another value set.
+                </td></tr>
+            <tr><td>AND</td>
+                <td>The AND operator allows the existence of multiple conditions in an SQL statement's WHERE clause.</td></tr>
+            <tr><td>ANY</td>
+                <td>The ANY operator is used to compare a value to any applicable value in the list as per the condition.</td>
+            </tr>
+            <tr><td>BETWEEN</td>
+                <td>The BETWEEN operator is used to search for values that are within a set of values, given the minimum value and the maximum value.</td>
+            </tr>
+            <tr><td>EXISTS</td>
+                <td>The EXISTS operator is used to search for the presence of a row in a specified table that meets a certain criterion.</td>
+            </tr>
+            <tr><td>IN</td>
+                <td>The IN operator is used to compare a value to a list of literal values that have been specified.</td>
+            </tr>
+            <tr><td>LIKE</td>
+                <td>The LIKE operator is used to compare a value to similar values using wildcard operators.</td>
+            </tr>
+            <tr><td>NOT</td>
+                <td>The NOT operator reverses the meaning of the logical operator with which it is used. Eg: NOT EXISTS, NOT BETWEEN, NOT IN, etc. This is a negate operator.</td>
+            </tr>
+            <tr><td>OR</td>
+                <td>The OR operator is used to combine multiple conditions in an SQL statement's WHERE clause.</td>
+            </tr>
+            <tr><td>IS NULL</td>
+                <td>The NULL operator is used to compare a value with a NULL value.</td>
+            </tr>
+            <tr><td>UNIQUE</td>
+                <td>The UNIQUE operator searches every row of a specified table for uniqueness (no duplicates).</td>
+            </tr>
+        </table>
+    </body>
+</html>
