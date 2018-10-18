@@ -22,6 +22,17 @@
                     <li>Allow users to set permissions on tables, procedures and views</li>
                 </ul>
             </li>
+
+        </ul>
+        <h1>Database Overview</h1>
+        <ul>    <li>You use databases all the time<ul>
+                    <li>When you use the internet search site</li>
+                    <li>When you log into a network you are validating your name and password against a database</li>
+                    <li>Even when you use an ATM card at a cash machine you are using database for PIN number verification and balance checking</li>
+                </ul></li>
+            <li>A database is a collection of data stored in some organised fashion</li>
+            <li>Database software is actually called the Database Management System (DBMS)</li>
+            <li>A database is a container created and manipulated via the DBMS</li>
         </ul>
         <h1>RDBMS</h1>
         <ul><li>RDBMS stands for Relational Database Management System
@@ -31,6 +42,20 @@
         <h1>Tables</h1>
         <ul><li>The data is an RDBMS is stored in database objects which as called as tables
             </li>
+            <li>A table is a structured file that can store data of a specific type</li>
+            <li>A table is one type of data or one list</li>
+            <li>Every table in a database has a name that identifies it.  That name must be always unique</li>
+            <li>What makes a table name unique is a combination of the database name and table name</li>
+            <li>You cannot use the same table name twice in the same database</li>
+            <li>You can reuse table names in different databases</li>
+            <li>Tables have characteristics and properties that define how data is stored in them, information includes<ul><li>
+                        What data is to be stored</li>
+                    <li>How the table is broke up</li>
+                    <li>How individual pieces of information are named</li></ul>
+
+            </li>
+            <li>Schema is Information about a database, the table layout and its properties</li>
+            <li>Schema's are used to describe specific tables within a database, as well as entire database and relationships between tables</li>
             <li>The Table is a collection of related data entries and its consists of numerous columns and rows</li>
             <li>A table is the most common and simplest form of data storage in a relational database.</li>
         </ul>
@@ -43,10 +68,25 @@
         <h1>Record or a Row</h1>
         <ul><li>A record is also called a row of data</li>
             <li>A record is each individual entry that exists in a table</li>
-            <li>A record is a horizontal entity in a table</li></ul>
+            <li>A record is a horizontal entity in a table</li>
+            <li>Data in a table is stored in rows</li>
+            <li>Each record is stored in its own row</li></ul>
         <img src="images/sql-field.png" alt="sql-field"/>
         <h1>Columns</h1>
         <ul><li>A column is a vertical entity in a table that contains all information associated with a specific field in a table</li>
+            <li>Tables are made up of one or more columns</li>
+            <li>Column is a single field in a table</li>
+            <li>It is extremely important to break data into multiple columns correctly.  By doing this makes it possible to sort and filter data</li>
+            <li>Each column in the database has an associated datatype, which defines what type of data the column can contain</li>
+        </ul>
+        <h1>Primary Keys</h1>
+        <ul><li>Every row in a table should have some column that uniquely identifies it, this is called a primary key</li>
+            <li>A primary key is used to refer to a specific row</li>
+            <li>Without a primary key, updating or deleting specific rows in a table becomes extremely difficult</li>
+            <li>Every row must have a primary key value</li>
+            <li>No two rows can have the same primary key value</li>
+            <li>Values in primary key columns should never be modified or updated</li>
+            <li>Primary keys should never be reused; i.e. if a row is deleted from a table</li>
         </ul>
         <h1>NULL Value</h1>
         <ul><li>A NULL value in a table is a value in a field that appears to be blank</li>
