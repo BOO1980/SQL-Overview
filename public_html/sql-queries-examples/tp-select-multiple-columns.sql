@@ -1,0 +1,1 @@
+SELECT cust_id, cust_name, salary FROM Customers;

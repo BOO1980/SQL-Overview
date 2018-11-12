@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQL Distinct Keyword</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/table-style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>SQL Distinct Keyword</h1>
+        <ul><li>The SQL <span class="sql-statement"> distinct</span> keyword is used in conjunction with the<span class="sql-statement"> SELECT</span> statement to eliminate all the duplicate records and fetching only unique records.</li>
+            <li>There may be a situation when you have multiple duplicate records in a table. While fetching such records, it makes more sense to fetch only those unique records instead of fetching duplicate records.</li>
+            <li>Distinct: recognisably different in nature from something else of a similar type.</li>
+            <li>When used the <span class="sql-statement">distinct</span> keyword must be placed directly in front of the column names</li>
+            <li>The <span class="sql-statement">distinct</span> keyword applies to all columns, not just the one it precedes</li></ul>
+
+        <h3>Basic Syntax</h3>
+        <div class="sql-example-wo-table">
+            <div class="sql-code">
+                <p><span class="sql-statement sql-state-exp-txt">select distinct</span> column1, column2... columnN </p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Table_name;</p>
+                <p><span class="sql-statement sql-state-exp-txt">where</span>[condition]</p>
+            </div>
+        </div>
+        <h3>Example</h3>
+        <p>This code would produce a result set without duplicate entry</p>
+        <div class="sql-example-wo-table">
+            <div class="sql-code">
+                <p><span class="sql-statement sql-state-exp-txt">select distinct</span> salary</p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Customers;</p>
+                <a class="sql-statement-link" href="sql-queries-examples/tp-select-distinct-values.sql">SQL Statement</a>
+            </div>
+            <div class="table-compare">
+                <div class="result-set result-set-comp result-set-without">
+                    <h3>Without <span class="sql-statement">distinct</span> keyword</h3>
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead><tr><th title="Field #1">salary</th>
+                            </tr></thead>
+                        <tbody><tr>
+                                <td align="right">1500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">2000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">2000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">4500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">5000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">6500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">8500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">10000.00</td>
+                            </tr>
+                        </tbody></table>
+                </div>
+                <div class="result-set result-set-comp result-set-with">
+                    <h3>With <span class="sql-statement">distinct</span> keyword</h3>
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead><tr><th title="Field #1">salary</th>
+                            </tr></thead>
+                        <tbody><tr>
+                                <td align="right">1500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">2000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">4500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">5000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">6500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">8500.00</td>
+                            </tr>
+                            <tr>
+                                <td align="right">10000.00</td>
+                            </tr>
+                        </tbody></table>
+                    <p>The salary 2000.00 has been shown once</p>
+                </div>
+            </div>
+        </div>
+        
+            <h3>Example</h3>
+        <p>The solution  uses the <span class="sql-statement">distinct</span> keyword which instructs the database to only return distinct values</p>
+  
+        <div class="sql-example-wo-table">
+            <div class="sql-code">
+                <p><span class="sql-statement sql-state-exp-txt">select distinct</span> vend_id </p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Products;</p>
+
+                <a class="sql-statement-link" href="sql-queries-examples/sams-select-distinct-values.sql">SQL Statement</a>
+            </div></div>
+        <div class="table-compare">
+            <div class="result-set result-set-comp result-set-without">
+                <h3>Without <span class="sql-statement">distinct</span> keyword</h3>
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">vend_id</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td>DLL01</td>
+                        </tr>
+                        <tr>
+                            <td>DLL01</td>
+                        </tr>
+                        <tr>
+                            <td>DLL01</td>
+                        </tr>
+                        <tr>
+                            <td>BRS01</td>
+                        </tr>
+                        <tr>
+                            <td>BRS01</td>
+                        </tr>
+                        <tr>
+                            <td>BRS01</td>
+                        </tr>
+                        <tr>
+                            <td>DLL01</td>
+                        </tr>
+                        <tr>
+                            <td>FNG01</td>
+                        </tr>
+                        <tr>
+                            <td>FNG01   </td>
+                        </tr>
+                    </tbody></table>
+
+            </div>
+            <div class="result-set result-set-comp result-set-with">
+                <h3>With <span class="sql-statement">distinct</span> keyword</h3>
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">vend_id</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td>BRS01     </td>
+                        </tr>
+                        <tr>
+                            <td>DLL01     </td>
+                        </tr>
+                        <tr>
+                            <td>FNG01     </td>
+                        </tr>
+                    </tbody></table>
+            </div>
+        </div>
+    
+    </body>
+</html>

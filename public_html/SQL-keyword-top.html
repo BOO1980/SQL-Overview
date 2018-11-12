@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SQL Keyword Top</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+        <link href="styles/table-style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>SQL Keyword Top</h1>
+        <ul><li>You can access the <span class="sql-statement"> top </span> keyword to limit the top number of entries</li></ul>
+        <h3>Example</h3>
+        <p>The following example uses the <span class="sql-statement">select top </span> 5 statement to retrieve just the first five rows.</p>
+        <div class="sql-example">
+            <div class="sql-code sql-code-and-table">
+                <p><span class="sql-statement sql-state-exp-txt">select top</span> 5 prod_name</p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Products;</p>
+                <a class="sql-statement-link" href="sql-queries-examples/sams-select-products.sql">SQL statement</a>
+            </div>
+            <div class="result-set">
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">prod_name</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td>Fish bean bag toy                                                                                                                                                                                                                                              </td>
+                        </tr>
+                        <tr>
+                            <td>Bird bean bag toy                                                                                                                                                                                                                                              </td>
+                        </tr>
+                        <tr>
+                            <td>Rabbit bean bag toy                                                                                                                                                                                                                                            </td>
+                        </tr>
+                        <tr>
+                            <td>8 inch teddy bear                                                                                                                                                                                                                                              </td>
+                        </tr>
+                        <tr>
+                            <td>12 inch teddy bear                                                                                                                                                                                                                                             </td>
+                        </tr>
+                    </tbody></table>
+            </div>
+
+        </div>
+    </body>
+</html>

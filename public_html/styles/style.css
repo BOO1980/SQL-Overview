@@ -1,0 +1,64 @@
+#body { margin:0; padding:0; font-size:100%; line-height:1; }
+p{
+    line-height: normal;
+}
+.sql-statement {
+    text-transform: uppercase;
+}
+.sql-state-exp-txt{
+    color: blue;
+    font-weight: 600;
+}
+
+.sql-statement-link {
+    padding: 10px 0 10px 0;
+}
+
+.sql-code {
+    background-color: lightcyan;
+    padding: 10px 0 10px 10px;
+    font-size: 14px;
+}
+.sql-code p{
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-family: courier;
+}
+
+.sql-example, .table-compare{
+    display: flex;
+    padding: 0 50px 20px 50px;
+}
+
+.sql-example-wo-table {
+    display:block;
+    padding: 0 50px 0 50px;
+}
+
+
+.sql-code-and-table {
+    float: left;
+    width:40%;
+    padding-right:  5px;
+    padding: 10px 0 0 10px;
+}
+
+.result-set {
+    float: right;
+    width: 70%;
+    padding-left: 5px;
+    font-size: small;
+}
+
+.result-set-without{
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+}
+.result-set-with{
+    float:right;
+    width:50%;
+        padding-left: 5px;
+}.comment {
+    color:green;
+}

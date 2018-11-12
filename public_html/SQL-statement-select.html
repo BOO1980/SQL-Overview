@@ -1,19 +1,374 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>SQL Select</title>
+        <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+        <link href="styles/table-style.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="styles/html5reset-1.6.1.css" rel="stylesheet" type="text/css"/>-->
+        <title>SQL Select Statement</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>SQL Select Query</h1>
-        <ul><li>The SQL Select statement is used to fetch the data from a database table which returns this data in the form of a result table</li>
-            <li>These results tables are called result-sets</li>
+        <h1>SQL Select Statement</h1>
+        <ul>
+            <li>The SQL <span class="sql-statement">select</span> statement is used to fetch the data from a database table which returns this data in the form of a result table</li>
+            <li>You can use the <span class="sql-statement">select</span> statement on one or more tables</li>
+            <li>To use <span class="sql-statement">select</span> to retrieve table data you must, at a minimum specify two pieces of information
+                <ul>
+                    <li>What you Select</li>
+                    <li>And from where you want to select it</li>
+                </ul>    
+            </li>
         </ul>
-    </body>
+
+        <h3>Examples</h3>
+
+        <div>
+            <p>The following example uses the <span class="sql-statement">select</span> to retrieve a single column called prod_name from the Products table</p>
+            <div class="sql-example">
+                <div class="sql-code sql-code-and-table">
+                    <p><span class="sql-statement sql-state-exp-txt">select</span> prod_name</p>
+                    <p><span class="sql-statement sql-state-exp-txt">from</span> Products;</p>
+                        <a class="sql-statement-link" href="sql-queries-examples/sams-select-products.sql">SQL statement</a>
+                </div>
+                <div class="result-set">
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead><tr><th title="Field #1">prod_name</th>
+                            </tr></thead>
+                        <tbody><tr>
+                                <td>Fish bean bag toy                                                                                                                                                                                                                                              </td>
+                            </tr>
+                            <tr>
+                                <td>Bird bean bag toy                                                                                                                                                                                                                                              </td>
+                            </tr>
+                            <tr>
+                                <td>Rabbit bean bag toy                                                                                                                                                                                                                                            </td>
+                            </tr>
+                            <tr>
+                                <td>8 inch teddy bear                                                                                                                                                                                                                                              </td>
+                            </tr>
+                            <tr>
+                                <td>12 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            </tr>
+                            <tr>
+                                <td>18 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            </tr>
+                            <tr>
+                                <td>Raggedy Ann                                                                                                                                                                                                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>King doll                                                                                                                                                                                                                                                      </td>
+                            </tr>
+                            <tr>
+                                <td>Queen doll                                                                                                                                                                                                                                                     </td>
+                            </tr>
+                        </tbody></table>
+                </div>
+
+            </div>
+            <p>The results of this query will be unsorted</p>
+        </div>
+
+        <h2>Retrieving Multiple Columns</h2>
+        <ul><li>
+                To retrieve multiple columns from a table, the same <span class="sql-statement">select</span> statement is used
+            </li>
+            <li>Multiple columns names must be specified after the <span class="sql-statement">select</span> keyword</li>
+            <li>Each column name must be separated by a comma</li>
+            <li>Do not specify a comma after the last column name as it will generate an error</li></ul>
+        <h3>Basic Syntax</h3>
+
+        <p>Selecting certain columns within at table</p>
+        <div class="sql-example-wo-table">
+            <div class="sql-code">
+                <p><span class="sql-statement sql-state-exp-txt">select</span> column1, column2, columnN </p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Table_name;</p>
+            </div>
+        </div>
+
+        <h3>Examples</h3>
+
+        <p>The following code is an example, which would fetch the id, name and salary fields of the customer table.</p>
+        <div class="sql-example">
+            <div class="sql-code sql-code-and-table">
+                <p><span class="sql-statement sql-state-exp-txt">select</span> id, name, salary</p>
+                <p><span class="sql-statement sql-state-exp-txt">from</span> Customers;</p>
+                    <a class="sql-statement-link" href="sql-queries-examples/tp-select-multiple-columns.sql">SQL Statement</a>
+            </div>
+            <div class="result-set">
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">cust_id</th>
+                            <th title="Field #2">cust_name</th>
+                            <th title="Field #3">salary</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td align="right">1</td>
+                            <td>Ramesh</td>
+                            <td align="right">2000.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">2</td>
+                            <td>Khilan</td>
+                            <td align="right">1500.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">3</td>
+                            <td>Kaushik</td>
+                            <td align="right">2000.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">6</td>
+                            <td>Chaitali</td>
+                            <td align="right">6500.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">7</td>
+                            <td>Hardik</td>
+                            <td align="right">8500.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">8</td>
+                            <td>Komal</td>
+                            <td align="right">4500.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">9</td>
+                            <td>Muffy</td>
+                            <td align="right">10000.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">10</td>
+                            <td>Sachin</td>
+                            <td align="right">5000.00</td>
+                        </tr>
+                    </tbody></table>
+            </div>
+        </div><!--Close example-->
+        <p>The following code selects three columns from the Products table</p>
+        <div class="sql-example">
+
+            <div class="sql-code sql-code-and-table">
+                <p><span class="sql-statement sql-state-exp-txt">SELECT</span> prod_id, prod_name, prod_price</p>
+                <p><span class="sql-statement sql-state-exp-txt">FROM</span> Products;</p>
+                    <a class="sql-statement-link" href="sql-queries-examples/sams-select-multiple-columns.sql">SQL Statement</a></div>
+            <div class="result-set">
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">prod_id</th>
+                            <th title="Field #2">prod_name</th>
+                            <th title="Field #3">prod_price</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td>BNBG01    </td>
+                            <td>Fish bean bag toy                                                                                                                                                                                                                                              </td>
+                            <td align="right">3.49</td>
+                        </tr>
+                        <tr>
+                            <td>BNBG02    </td>
+                            <td>Bird bean bag toy                                                                                                                                                                                                                                              </td>
+                            <td align="right">3.49</td>
+                        </tr>
+                        <tr>
+                            <td>BNBG03    </td>
+                            <td>Rabbit bean bag toy                                                                                                                                                                                                                                            </td>
+                            <td align="right">3.49</td>
+                        </tr>
+                        <tr>
+                            <td>BR01      </td>
+                            <td>8 inch teddy bear                                                                                                                                                                                                                                              </td>
+                            <td align="right">5.99</td>
+                        </tr>
+                        <tr>
+                            <td>BR02      </td>
+                            <td>12 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            <td align="right">8.99</td>
+                        </tr>
+                        <tr>
+                            <td>BR03      </td>
+                            <td>18 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            <td align="right">11.99</td>
+                        </tr>
+                        <tr>
+                            <td>RGAN01    </td>
+                            <td>Raggedy Ann                                                                                                                                                                                                                                                    </td>
+                            <td align="right">4.99</td>
+                        </tr>
+                        <tr>
+                            <td>RYL01     </td>
+                            <td>King doll                                                                                                                                                                                                                                                      </td>
+                            <td align="right">9.49</td>
+                        </tr>
+                        <tr>
+                            <td>RYL02     </td>
+                            <td>Queen doll                                                                                                                                                                                                                                                     </td>
+                            <td align="right">9.49</td>
+                        </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <h2>Retrieving All Columns</h2>
+        <ul><li><span class="sql-statement">select</span> statements can also request all columns without having to list them individually</li>
+            <li>Asterisks is a wildcard character that allows you to select all the column names of a table</li>
+            <li>You are better of not using the * wildcard unless you really do need every column in the table as unnecessary columns can slow down the performance of retrieval of data and/or the application</li>
+            <li>The advantage of using wildcards is that it is possible to retrieve columns whose names are unknown</li></ul>
+        <h3>Basic Syntax</h3>
+
+        <p>Selecting all columns within at table</p>
+        <p>The wildcard character is specified right after the <span class="sql-statement">select</span> statement</p>
+        <p><span class="sql-statement">select</span> * <span class="sql-statement">From</span></p>
+        <h3>Examples</h3>
+
+        <p>The following examples uses the asterisks wildcard character to retrieve all columns of the table</p>
+        <div class ="sql-example">
+            <div class="sql-code sql-code-and-table">
+                <p><span class="sql-statement  sql-state-exp-txt">select</span> * </p>
+                <p><span class="sql-statement  sql-state-exp-txt">from</span> Products;</p>
+                    <a class="sql-statement-link" href="sql-queries-examples/sams-select-all-columns.sql">SQL Statement</a></div>
+            <div class="result-set">
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">prod_id</th>
+                            <th title="Field #2">vend_id</th>
+                            <th title="Field #3">prod_name</th>
+                            <th title="Field #4">prod_price</th>
+                            <th title="Field #5">prod_desc</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td>BNBG01    </td>
+                            <td>DLL01     </td>
+                            <td>Fish bean bag toy                                                                                                                                                                                                                                              </td>
+                            <td align="right">3.49</td>
+                            <td>Fish bean bag toy, complete with bean bag worms with which to feed it</td>
+                        </tr>
+                        <tr>
+                            <td>BNBG02    </td>
+                            <td>DLL01     </td>
+                            <td>Bird bean bag toy                                                                                                                                                                                                                                              </td>
+                            <td align="right">3.49</td>
+                            <td>Bird bean bag toy, eggs are not included</td>
+                        </tr>
+                        <tr>
+                            <td>BNBG03    </td>
+                            <td>DLL01     </td>
+                            <td>Rabbit bean bag toy                                                                                                                                                                                                                                            </td>
+                            <td align="right">3.49</td>
+                            <td>Rabbit bean bag toy, comes with bean bag carrots</td>
+                        </tr>
+                        <tr>
+                            <td>BR01      </td>
+                            <td>BRS01     </td>
+                            <td>8 inch teddy bear                                                                                                                                                                                                                                              </td>
+                            <td align="right">5.99</td>
+                            <td>8 inch teddy bear, comes with cap and jacket</td>
+                        </tr>
+                        <tr>
+                            <td>BR02      </td>
+                            <td>BRS01     </td>
+                            <td>12 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            <td align="right">8.99</td>
+                            <td>12 inch teddy bear, comes with cap and jacket</td>
+                        </tr>
+                        <tr>
+                            <td>BR03      </td>
+                            <td>BRS01     </td>
+                            <td>18 inch teddy bear                                                                                                                                                                                                                                             </td>
+                            <td align="right">11.99</td>
+                            <td>18 inch teddy bear, comes with cap and jacket</td>
+                        </tr>
+                        <tr>
+                            <td>RGAN01    </td>
+                            <td>DLL01     </td>
+                            <td>Raggedy Ann                                                                                                                                                                                                                                                    </td>
+                            <td align="right">4.99</td>
+                            <td>18 inch Raggedy Ann doll</td>
+                        </tr>
+                        <tr>
+                            <td>RYL01     </td>
+                            <td>FNG01     </td>
+                            <td>King doll                                                                                                                                                                                                                                                      </td>
+                            <td align="right">9.49</td>
+                            <td>12 inch king doll with royal garments and crown</td>
+                        </tr>
+                        <tr>
+                            <td>RYL02     </td>
+                            <td>FNG01     </td>
+                            <td>Queen doll                                                                                                                                                                                                                                                     </td>
+                            <td align="right">9.49</td>
+                            <td>12 inch queen doll with royal garments and crown</td>
+                        </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class ="sql-example">
+            <div class="sql-code sql-code-and-table">
+                <p><span class="sql-statement  sql-state-exp-txt">select</span> * </p>
+                <p><span class="sql-statement  sql-state-exp-txt">from</span> Customers;</p>
+                    <a class="sql-statement-link" href="sql-queries-examples/tp-select-all.sql">SQL Statement</a>
+            </div>
+            <div class="result-set">
+                <table class="table table-bordered table-hover table-condensed">
+                    <thead><tr><th title="Field #1">cust_id</th>
+                            <th title="Field #2">cust_name</th>
+                            <th title="Field #3">age</th>
+                            <th title="Field #4">address</th>
+                            <th title="Field #5">salary</th>
+                        </tr></thead>
+                    <tbody><tr>
+                            <td align="right">1</td>
+                            <td>Ramesh</td>
+                            <td align="right">32</td>
+                            <td>Ahmedabad                </td>
+                            <td align="right">2000</td>
+                        </tr>
+                        <tr>
+                            <td align="right">2</td>
+                            <td>Khilan</td>
+                            <td align="right">25</td>
+                            <td>Dehil                    </td>
+                            <td align="right">1500</td>
+                        </tr>
+                        <tr>
+                            <td align="right">3</td>
+                            <td>Kaushik</td>
+                            <td align="right">23</td>
+                            <td>Kota                     </td>
+                            <td align="right">2000</td>
+                        </tr>
+                        <tr>
+                            <td align="right">4</td>
+                            <td>Chaitali</td>
+                            <td align="right">25</td>
+                            <td>Mumbai                   </td>
+                            <td align="right">6500</td>
+                        </tr>
+                        <tr>
+                            <td align="right">5</td>
+                            <td>Hardik</td>
+                            <td align="right">27</td>
+                            <td>Bhopal                   </td>
+                            <td align="right">8500</td>
+                        </tr>
+                        <tr>
+                            <td align="right">6</td>
+                            <td>Komal</td>
+                            <td align="right">22</td>
+                            <td>MP                       </td>
+                            <td align="right">4500</td>
+                        </tr>
+                        <tr>
+                            <td align="right">7</td>
+                            <td>Muffy</td>
+                            <td align="right">24</td>
+                            <td>Indore                   </td>
+                            <td align="right">10000</td>
+                        </tr>
+                        <tr>
+                            <td align="right">8</td>
+                            <td>Sachin</td>
+                            <td align="right">36</td>
+                            <td>Lower West Side          </td>
+                            <td align="right">5000</td>
+                        </tr>
+                    </tbody></table>
+            </div>
+        </div>
+    </body> 
 </html>
