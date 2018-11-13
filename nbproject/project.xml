@@ -6,6 +6,8 @@
             <name>SQL-Overview</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>MS</word>
+            <word>MySQL</word>
             <word>RDBMS</word>
             <word>SQL</word>
             <word>Unicode</word>
